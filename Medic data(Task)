@@ -1,0 +1,1040 @@
+{
+   "title": "Woman Health Summary",
+   "id": "ba7733c8bb9e0f797d13a8a1b9f51fc5",
+   "workspace": {
+      "dimensions": {
+         "w": 808
+      },
+      "datasources": [
+         "c77d1a7b0a66f6ae318c1ddec0cb7f53"
+      ]
+   },
+   "appliedMigrations": {
+      "post_dst": true,
+      "separate_root_dsts": true,
+      "result_rows2": true
+   },
+   "components": [
+      {
+         "type": "panel_grid",
+         "id": "bf1ecfc3-19",
+         "displayName": "Layout Grid",
+         "components": [
+            {
+               "type": "input",
+               "id": "a03ab876",
+               "displayName": "User Input Control",
+               "layoutConfig": {
+                  "x": 1,
+                  "y": 0
+               },
+               "renamed": true,
+               "dstContext": {
+                  "id": "dsta03ab876",
+                  "kid": "ba7733c8bb9e0f797d13a8a1b9f51fc5",
+                  "ops": [
+                     {
+                        "type": "group",
+                        "groupBy": "a78f386b"
+                     }
+                  ],
+                  "aggs": {
+                     "87151217": "auto",
+                     "90040017": "auto",
+                     "7b17cc5997": "auto",
+                     "d2cb40c181": "auto"
+                  }
+               },
+               "components": [
+                  {
+                     "type": "proxy",
+                     "role": "values",
+                     "id": "a78f386b",
+                     "displayName": "Values",
+                     "fmtArgs": {
+                        "resultMetadata": {
+                           "ignoreDateFormat": false,
+                           "isAggregated": false,
+                           "formulaIsDataPointer": false,
+                           "suggestedName": "Unnamed 1",
+                           "isGrouped": true,
+                           "isDSTApplied": true,
+                           "resultCount": 1
+                        }
+                     },
+                     "formulas": [
+                        {
+                           "txt": "SLICE(df0420353201c345b9143a4b8ef6dbc6@B:B;)",
+                           "ver": 2
+                        }
+                     ],
+                     "data": [
+                        [
+                           "Dambe Facility",
+                           "Dummy Facility",
+                           "Medic Mobile",
+                           "Neno DHO Facility",
+                           "OpenMRS Hackathon",
+                           "Tom K's SCHW Area"
+                        ]
+                     ],
+                     "autoFmt": false
+                  },
+                  {
+                     "type": "proxy",
+                     "role": "labels",
+                     "id": "c864046c",
+                     "displayName": "Labels",
+                     "formulas": [],
+                     "data": [
+                        []
+                     ],
+                     "autoFmt": false
+                  },
+                  {
+                     "type": "data_slot",
+                     "role": "data",
+                     "id": "7b17cc59-97",
+                     "displayName": "Month",
+                     "fmt": "txt",
+                     "fmtArgs": {
+                        "resultMetadata": {
+                           "ignoreDateFormat": false,
+                           "isAggregated": false,
+                           "formulaIsDataPointer": false,
+                           "suggestedName": "Unnamed 1",
+                           "resultCount": 1
+                        },
+                        "autoFmt": {
+                           "fmtArgs": {},
+                           "defaultAggregate": "COUNT",
+                           "fmt": "txt"
+                        }
+                     },
+                     "dstContext": {
+                        "id": "dst7b17cc5997",
+                        "kid": "ba7733c8bb9e0f797d13a8a1b9f51fc5",
+                        "ops": [],
+                        "aggs": {}
+                     },
+                     "isDstRoot": true,
+                     "formulas": [
+                        {
+                           "txt": "DATEVALUE(GROUP(SLICE(c77d1a7b0a66f6ae318c1ddec0cb7f53@H:H;)),\"MMM yyyy\")",
+                           "ver": 2
+                        }
+                     ],
+                     "data": [
+                        [
+                           "Oct 2018",
+                           "Nov 2018",
+                           "Dec 2018",
+                           "Jan 2019",
+                           "Feb 2019",
+                           "Mar 2019",
+                           "Apr 2019"
+                        ]
+                     ],
+                     "autoFmt": true,
+                     "name": "Month"
+                  }
+               ],
+               "scope": 2,
+               "propName": "hospital",
+               "defaultValue": "Neno DHO Facility",
+               "inputType": 1,
+               "inputLabel": "Hospital_Name",
+               "controlWidth": true,
+               "width": "200",
+               "includeAllData": true
+            },
+            {
+               "type": "table",
+               "id": "29d34f64",
+               "displayName": "Table",
+               "layoutConfig": {
+                  "x": 0,
+                  "y": 1
+               },
+               "renamed": true,
+               "dstContext": {
+                  "id": "dst29d34f64",
+                  "kid": "ba7733c8bb9e0f797d13a8a1b9f51fc5"
+               },
+               "components": [
+                  {
+                     "type": "table_col",
+                     "role": "tcol",
+                     "id": "1765cc00",
+                     "displayName": "Category",
+                     "renamed": true,
+                     "namerenamed": true,
+                     "size": "xx-small",
+                     "fmt": "txt",
+                     "fmtArgs": {
+                        "resultMetadata": {
+                           "ignoreDateFormat": false,
+                           "isAggregated": false,
+                           "formulaIsDataPointer": false,
+                           "suggestedName": "Unnamed 1",
+                           "resultCount": 1
+                        },
+                        "autoFmt": {
+                           "fmtArgs": {},
+                           "defaultAggregate": "COUNT",
+                           "fmt": "txt"
+                        }
+                     },
+                     "components": [
+                        {
+                           "type": "table_headers",
+                           "role": "customHeader",
+                           "id": "c4337d33-49",
+                           "displayName": "Category",
+                           "size": "xx-small",
+                           "fmt": "txt",
+                           "fmtArgs": {
+                              "resultMetadata": {
+                                 "ignoreDateFormat": false,
+                                 "isAggregated": false,
+                                 "formulaIsDataPointer": false,
+                                 "suggestedName": "Unnamed 1",
+                                 "resultCount": 1
+                              }
+                           },
+                           "dstContext": {
+                              "id": "dstc4337d3349",
+                              "kid": "ba7733c8bb9e0f797d13a8a1b9f51fc5"
+                           },
+                           "conditions": [
+                              {
+                                 "predicates": [
+                                    {
+                                       "left": {
+                                          "self": 1
+                                       },
+                                       "type": "notContain",
+                                       "right": {
+                                          "raw": "0"
+                                       }
+                                    }
+                                 ],
+                                 "reactions": [
+                                    {
+                                       "type": "background-color",
+                                       "value": "cx-bgcolor_fff",
+                                       "isScalar": true
+                                    }
+                                 ]
+                              }
+                           ],
+                           "formulas": [
+                              {
+                                 "txt": "\"\"",
+                                 "ver": 2
+                              }
+                           ],
+                           "data": [
+                              [
+                                 ""
+                              ]
+                           ],
+                           "mixin": "label",
+                           "align": "l",
+                           "font_style": ""
+                        }
+                     ],
+                     "formulas": [
+                        {
+                           "txt": "ARRAY(\"Swelling(Feet hands leg face)\",\"Lower abdominal pain\",\"Headaches Dizziness or blurry vision\",\"Fever\",\"Bleeding\",\"Convulsions\")",
+                           "ver": 2
+                        }
+                     ],
+                     "data": [
+                        [
+                           "Swelling(Feet hands leg face)",
+                           "Lower abdominal pain",
+                           "Headaches Dizziness or blurry vision",
+                           "Fever",
+                           "Bleeding",
+                           "Convulsions"
+                        ]
+                     ],
+                     "autoFmt": true,
+                     "name": "",
+                     "index": 0,
+                     "customHeader": true,
+                     "wrap": "active"
+                  },
+                  {
+                     "type": "table_col",
+                     "role": "tcol",
+                     "id": "75bc7f09",
+                     "displayName": "7th Month",
+                     "renamed": true,
+                     "size": "xx-small",
+                     "fmt": "num",
+                     "fmtArgs": {
+                        "resultMetadata": {
+                           "ignoreDateFormat": false,
+                           "isAggregated": false,
+                           "formulaIsDataPointer": false,
+                           "suggestedName": "Unnamed 1",
+                           "resultCount": 1
+                        },
+                        "autoFmt": {
+                           "fmtArgs": {
+                              "precision": "0"
+                           },
+                           "defaultAggregate": "SUM",
+                           "fmt": "num"
+                        }
+                     },
+                     "components": [
+                        {
+                           "type": "table_headers",
+                           "role": "customHeader",
+                           "id": "3ef6ebef",
+                           "displayName": "7th Month",
+                           "size": "xx-small",
+                           "fmt": "txt",
+                           "fmtArgs": {
+                              "resultMetadata": {
+                                 "ignoreDateFormat": false,
+                                 "isAggregated": false,
+                                 "formulaIsDataPointer": false,
+                                 "suggestedName": "Unnamed 1",
+                                 "resultCount": 1
+                              }
+                           },
+                           "dstContext": {
+                              "id": "dst3ef6ebef",
+                              "kid": "ba7733c8bb9e0f797d13a8a1b9f51fc5"
+                           },
+                           "conditions": [
+                              {
+                                 "predicates": [
+                                    {
+                                       "left": {
+                                          "self": 1
+                                       },
+                                       "type": "ne",
+                                       "right": {
+                                          "raw": "0"
+                                       }
+                                    }
+                                 ],
+                                 "reactions": [
+                                    {
+                                       "type": "background-color",
+                                       "value": "cx-bgcolor_fff",
+                                       "isScalar": true
+                                    }
+                                 ]
+                              }
+                           ],
+                           "formulas": [
+                              {
+                                 "txt": "FIRST(LAST(&'7b17cc59-97',7))",
+                                 "ver": 2
+                              }
+                           ],
+                           "data": [
+                              [
+                                 "Oct 2018"
+                              ]
+                           ],
+                           "mixin": "label",
+                           "align": "c",
+                           "font_colour": "cx-color_000",
+                           "font_style": "bold"
+                        }
+                     ],
+                     "formulas": [
+                        {
+                           "txt": "ARRAY(SUM(SELECT(SLICE(c77d1a7b0a66f6ae318c1ddec0cb7f53@AF:AF;),AND(OR(SLICE(c77d1a7b0a66f6ae318c1ddec0cb7f53@B:B;)=$hospital,\"_all_\"=$hospital),DATEVALUE(SLICE(c77d1a7b0a66f6ae318c1ddec0cb7f53@H:H;),\"MMM yyyy\")=FIRST(LAST(&'7b17cc59-97',7))))),SUM(SELECT(SLICE(c77d1a7b0a66f6ae318c1ddec0cb7f53@AI:AI;),AND(OR(SLICE(c77d1a7b0a66f6ae318c1ddec0cb7f53@B:B;)=$hospital,\"_all_\"=$hospital),DATEVALUE(SLICE(c77d1a7b0a66f6ae318c1ddec0cb7f53@H:H;),\"MMM yyyy\")=FIRST(LAST(&'7b17cc59-97',7))))),SUM(SELECT(SLICE(c77d1a7b0a66f6ae318c1ddec0cb7f53@AH:AH;),AND(OR(SLICE(c77d1a7b0a66f6ae318c1ddec0cb7f53@B:B;)=$hospital,\"_all_\"=$hospital),DATEVALUE(SLICE(c77d1a7b0a66f6ae318c1ddec0cb7f53@H:H;),\"MMM yyyy\")=FIRST(LAST(&'7b17cc59-97',7))))),SUM(SELECT(SLICE(c77d1a7b0a66f6ae318c1ddec0cb7f53@AG:AG;),AND(OR(SLICE(c77d1a7b0a66f6ae318c1ddec0cb7f53@B:B;)=$hospital,\"_all_\"=$hospital),DATEVALUE(SLICE(c77d1a7b0a66f6ae318c1ddec0cb7f53@H:H;),\"MMM yyyy\")=FIRST(LAST(&'7b17cc59-97',7))))),SUM(SELECT(SLICE(c77d1a7b0a66f6ae318c1ddec0cb7f53@AE:AE;),AND(OR(SLICE(c77d1a7b0a66f6ae318c1ddec0cb7f53@B:B;)=$hospital,\"_all_\"=$hospital),DATEVALUE(SLICE(c77d1a7b0a66f6ae318c1ddec0cb7f53@H:H;),\"MMM yyyy\")=FIRST(LAST(&'7b17cc59-97',7))))),SUM(SELECT(SLICE(c77d1a7b0a66f6ae318c1ddec0cb7f53@AJ:AJ;),AND(OR(SLICE(c77d1a7b0a66f6ae318c1ddec0cb7f53@B:B;)=$hospital,\"_all_\"=$hospital),DATEVALUE(SLICE(c77d1a7b0a66f6ae318c1ddec0cb7f53@H:H;),\"MMM yyyy\")=FIRST(LAST(&'7b17cc59-97',7))))))",
+                           "ver": 2
+                        }
+                     ],
+                     "data": [
+                        [
+                           0,
+                           0,
+                           0,
+                           0,
+                           0,
+                           0
+                        ]
+                     ],
+                     "autoFmt": true,
+                     "name": "Unnamed 2",
+                     "index": 1,
+                     "customHeader": true,
+                     "align": "c"
+                  },
+                  {
+                     "type": "table_col",
+                     "role": "tcol",
+                     "id": "336cdcaa",
+                     "displayName": "6th Month",
+                     "renamed": true,
+                     "size": "xx-small",
+                     "fmt": "num",
+                     "fmtArgs": {
+                        "resultMetadata": {
+                           "ignoreDateFormat": false,
+                           "isAggregated": false,
+                           "formulaIsDataPointer": false,
+                           "suggestedName": "Unnamed 1",
+                           "resultCount": 1
+                        },
+                        "autoFmt": {
+                           "fmtArgs": {
+                              "precision": "0"
+                           },
+                           "defaultAggregate": "SUM",
+                           "fmt": "num"
+                        }
+                     },
+                     "components": [
+                        {
+                           "type": "table_headers",
+                           "role": "customHeader",
+                           "id": "50b7b194",
+                           "displayName": "6th Month",
+                           "size": "xx-small",
+                           "fmt": "txt",
+                           "fmtArgs": {
+                              "resultMetadata": {
+                                 "ignoreDateFormat": false,
+                                 "isAggregated": false,
+                                 "formulaIsDataPointer": false,
+                                 "suggestedName": "Unnamed 1",
+                                 "resultCount": 1
+                              }
+                           },
+                           "dstContext": {
+                              "id": "dst50b7b194",
+                              "kid": "ba7733c8bb9e0f797d13a8a1b9f51fc5"
+                           },
+                           "conditions": [
+                              {
+                                 "predicates": [
+                                    {
+                                       "left": {
+                                          "self": 1
+                                       },
+                                       "type": "ne",
+                                       "right": {
+                                          "raw": "0"
+                                       }
+                                    }
+                                 ],
+                                 "reactions": [
+                                    {
+                                       "type": "background-color",
+                                       "value": "cx-bgcolor_fff",
+                                       "isScalar": true
+                                    }
+                                 ]
+                              }
+                           ],
+                           "formulas": [
+                              {
+                                 "txt": "FIRST(LAST(&'7b17cc59-97',6))",
+                                 "ver": 2
+                              }
+                           ],
+                           "data": [
+                              [
+                                 "Nov 2018"
+                              ]
+                           ],
+                           "mixin": "label",
+                           "align": "c",
+                           "font_colour": "cx-color_000",
+                           "font_style": "bold"
+                        }
+                     ],
+                     "formulas": [
+                        {
+                           "txt": "ARRAY(SUM(SELECT(SLICE(c77d1a7b0a66f6ae318c1ddec0cb7f53@AF:AF;),AND(OR(SLICE(c77d1a7b0a66f6ae318c1ddec0cb7f53@B:B;)=$hospital,\"_all_\"=$hospital),DATEVALUE(SLICE(c77d1a7b0a66f6ae318c1ddec0cb7f53@H:H;),\"MMM yyyy\")=FIRST(LAST(&'7b17cc59-97',6))))),SUM(SELECT(SLICE(c77d1a7b0a66f6ae318c1ddec0cb7f53@AI:AI;),AND(OR(SLICE(c77d1a7b0a66f6ae318c1ddec0cb7f53@B:B;)=$hospital,\"_all_\"=$hospital),DATEVALUE(SLICE(c77d1a7b0a66f6ae318c1ddec0cb7f53@H:H;),\"MMM yyyy\")=FIRST(LAST(&'7b17cc59-97',6))))),SUM(SELECT(SLICE(c77d1a7b0a66f6ae318c1ddec0cb7f53@AH:AH;),AND(OR(SLICE(c77d1a7b0a66f6ae318c1ddec0cb7f53@B:B;)=$hospital,\"_all_\"=$hospital),DATEVALUE(SLICE(c77d1a7b0a66f6ae318c1ddec0cb7f53@H:H;),\"MMM yyyy\")=FIRST(LAST(&'7b17cc59-97',6))))),SUM(SELECT(SLICE(c77d1a7b0a66f6ae318c1ddec0cb7f53@AG:AG;),AND(OR(SLICE(c77d1a7b0a66f6ae318c1ddec0cb7f53@B:B;)=$hospital,\"_all_\"=$hospital),DATEVALUE(SLICE(c77d1a7b0a66f6ae318c1ddec0cb7f53@H:H;),\"MMM yyyy\")=FIRST(LAST(&'7b17cc59-97',6))))),SUM(SELECT(SLICE(c77d1a7b0a66f6ae318c1ddec0cb7f53@AE:AE;),AND(OR(SLICE(c77d1a7b0a66f6ae318c1ddec0cb7f53@B:B;)=$hospital,\"_all_\"=$hospital),DATEVALUE(SLICE(c77d1a7b0a66f6ae318c1ddec0cb7f53@H:H;),\"MMM yyyy\")=FIRST(LAST(&'7b17cc59-97',6))))),SUM(SELECT(SLICE(c77d1a7b0a66f6ae318c1ddec0cb7f53@AJ:AJ;),AND(OR(SLICE(c77d1a7b0a66f6ae318c1ddec0cb7f53@B:B;)=$hospital,\"_all_\"=$hospital),DATEVALUE(SLICE(c77d1a7b0a66f6ae318c1ddec0cb7f53@H:H;),\"MMM yyyy\")=FIRST(LAST(&'7b17cc59-97',6))))))",
+                           "ver": 2
+                        }
+                     ],
+                     "data": [
+                        [
+                           0,
+                           0,
+                           0,
+                           0,
+                           0,
+                           0
+                        ]
+                     ],
+                     "autoFmt": true,
+                     "name": "Unnamed 3",
+                     "index": 2,
+                     "customHeader": true,
+                     "align": "c"
+                  },
+                  {
+                     "type": "table_col",
+                     "role": "tcol",
+                     "id": "9266ac38",
+                     "displayName": "5th Month",
+                     "renamed": true,
+                     "size": "xx-small",
+                     "fmt": "num",
+                     "fmtArgs": {
+                        "resultMetadata": {
+                           "ignoreDateFormat": false,
+                           "isAggregated": false,
+                           "formulaIsDataPointer": false,
+                           "suggestedName": "Unnamed 1",
+                           "resultCount": 1
+                        },
+                        "autoFmt": {
+                           "fmtArgs": {
+                              "precision": "0"
+                           },
+                           "defaultAggregate": "SUM",
+                           "fmt": "num"
+                        }
+                     },
+                     "components": [
+                        {
+                           "type": "table_headers",
+                           "role": "customHeader",
+                           "id": "f7caf704",
+                           "displayName": "5th Month",
+                           "size": "xx-small",
+                           "fmt": "txt",
+                           "fmtArgs": {
+                              "resultMetadata": {
+                                 "ignoreDateFormat": false,
+                                 "isAggregated": false,
+                                 "formulaIsDataPointer": false,
+                                 "suggestedName": "Unnamed 1",
+                                 "resultCount": 1
+                              }
+                           },
+                           "dstContext": {
+                              "id": "dstf7caf704",
+                              "kid": "ba7733c8bb9e0f797d13a8a1b9f51fc5"
+                           },
+                           "conditions": [
+                              {
+                                 "predicates": [
+                                    {
+                                       "left": {
+                                          "self": 1
+                                       },
+                                       "type": "ne",
+                                       "right": {
+                                          "raw": "0"
+                                       }
+                                    }
+                                 ],
+                                 "reactions": [
+                                    {
+                                       "type": "background-color",
+                                       "value": "cx-bgcolor_fff",
+                                       "isScalar": true
+                                    }
+                                 ]
+                              }
+                           ],
+                           "formulas": [
+                              {
+                                 "txt": "FIRST(LAST(&'7b17cc59-97',5))",
+                                 "ver": 2
+                              }
+                           ],
+                           "data": [
+                              [
+                                 "Dec 2018"
+                              ]
+                           ],
+                           "mixin": "label",
+                           "align": "c",
+                           "font_colour": "cx-color_000",
+                           "font_style": "bold"
+                        }
+                     ],
+                     "formulas": [
+                        {
+                           "txt": "ARRAY(SUM(SELECT(SLICE(c77d1a7b0a66f6ae318c1ddec0cb7f53@AF:AF;),AND(OR(SLICE(c77d1a7b0a66f6ae318c1ddec0cb7f53@B:B;)=$hospital,\"_all_\"=$hospital),DATEVALUE(SLICE(c77d1a7b0a66f6ae318c1ddec0cb7f53@H:H;),\"MMM yyyy\")=FIRST(LAST(&'7b17cc59-97',5))))),SUM(SELECT(SLICE(c77d1a7b0a66f6ae318c1ddec0cb7f53@AI:AI;),AND(OR(SLICE(c77d1a7b0a66f6ae318c1ddec0cb7f53@B:B;)=$hospital,\"_all_\"=$hospital),DATEVALUE(SLICE(c77d1a7b0a66f6ae318c1ddec0cb7f53@H:H;),\"MMM yyyy\")=FIRST(LAST(&'7b17cc59-97',5))))),SUM(SELECT(SLICE(c77d1a7b0a66f6ae318c1ddec0cb7f53@AH:AH;),AND(OR(SLICE(c77d1a7b0a66f6ae318c1ddec0cb7f53@B:B;)=$hospital,\"_all_\"=$hospital),DATEVALUE(SLICE(c77d1a7b0a66f6ae318c1ddec0cb7f53@H:H;),\"MMM yyyy\")=FIRST(LAST(&'7b17cc59-97',5))))),SUM(SELECT(SLICE(c77d1a7b0a66f6ae318c1ddec0cb7f53@AG:AG;),AND(OR(SLICE(c77d1a7b0a66f6ae318c1ddec0cb7f53@B:B;)=$hospital,\"_all_\"=$hospital),DATEVALUE(SLICE(c77d1a7b0a66f6ae318c1ddec0cb7f53@H:H;),\"MMM yyyy\")=FIRST(LAST(&'7b17cc59-97',5))))),SUM(SELECT(SLICE(c77d1a7b0a66f6ae318c1ddec0cb7f53@AE:AE;),AND(OR(SLICE(c77d1a7b0a66f6ae318c1ddec0cb7f53@B:B;)=$hospital,\"_all_\"=$hospital),DATEVALUE(SLICE(c77d1a7b0a66f6ae318c1ddec0cb7f53@H:H;),\"MMM yyyy\")=FIRST(LAST(&'7b17cc59-97',5))))),SUM(SELECT(SLICE(c77d1a7b0a66f6ae318c1ddec0cb7f53@AJ:AJ;),AND(OR(SLICE(c77d1a7b0a66f6ae318c1ddec0cb7f53@B:B;)=$hospital,\"_all_\"=$hospital),DATEVALUE(SLICE(c77d1a7b0a66f6ae318c1ddec0cb7f53@H:H;),\"MMM yyyy\")=FIRST(LAST(&'7b17cc59-97',5))))))",
+                           "ver": 2
+                        }
+                     ],
+                     "data": [
+                        [
+                           0,
+                           0,
+                           0,
+                           0,
+                           0,
+                           0
+                        ]
+                     ],
+                     "autoFmt": true,
+                     "name": "Unnamed 4",
+                     "index": 3,
+                     "customHeader": true,
+                     "align": "c"
+                  },
+                  {
+                     "type": "table_col",
+                     "role": "tcol",
+                     "id": "29af8df7",
+                     "displayName": "4th Month",
+                     "renamed": true,
+                     "size": "xx-small",
+                     "fmt": "num",
+                     "fmtArgs": {
+                        "resultMetadata": {
+                           "ignoreDateFormat": false,
+                           "isAggregated": false,
+                           "formulaIsDataPointer": false,
+                           "suggestedName": "Unnamed 1",
+                           "resultCount": 1
+                        },
+                        "autoFmt": {
+                           "fmtArgs": {
+                              "precision": "0"
+                           },
+                           "defaultAggregate": "SUM",
+                           "fmt": "num"
+                        }
+                     },
+                     "components": [
+                        {
+                           "type": "table_headers",
+                           "role": "customHeader",
+                           "id": "ab4998e0",
+                           "displayName": "4th Month",
+                           "size": "xx-small",
+                           "fmt": "txt",
+                           "fmtArgs": {
+                              "resultMetadata": {
+                                 "ignoreDateFormat": false,
+                                 "isAggregated": false,
+                                 "formulaIsDataPointer": false,
+                                 "suggestedName": "Unnamed 1",
+                                 "resultCount": 1
+                              }
+                           },
+                           "dstContext": {
+                              "id": "dstab4998e0",
+                              "kid": "ba7733c8bb9e0f797d13a8a1b9f51fc5"
+                           },
+                           "conditions": [
+                              {
+                                 "predicates": [
+                                    {
+                                       "left": {
+                                          "self": 1
+                                       },
+                                       "type": "ne",
+                                       "right": {
+                                          "raw": "0"
+                                       }
+                                    }
+                                 ],
+                                 "reactions": [
+                                    {
+                                       "type": "background-color",
+                                       "value": "cx-bgcolor_fff",
+                                       "isScalar": true
+                                    }
+                                 ]
+                              }
+                           ],
+                           "formulas": [
+                              {
+                                 "txt": "FIRST(LAST(&'7b17cc59-97',4))",
+                                 "ver": 2
+                              }
+                           ],
+                           "data": [
+                              [
+                                 "Jan 2019"
+                              ]
+                           ],
+                           "mixin": "label",
+                           "align": "c",
+                           "font_colour": "cx-color_000",
+                           "font_style": "bold"
+                        }
+                     ],
+                     "formulas": [
+                        {
+                           "txt": "ARRAY(SUM(SELECT(SLICE(c77d1a7b0a66f6ae318c1ddec0cb7f53@AF:AF;),AND(OR(SLICE(c77d1a7b0a66f6ae318c1ddec0cb7f53@B:B;)=$hospital,\"_all_\"=$hospital),DATEVALUE(SLICE(c77d1a7b0a66f6ae318c1ddec0cb7f53@H:H;),\"MMM yyyy\")=FIRST(LAST(&'7b17cc59-97',4))))),SUM(SELECT(SLICE(c77d1a7b0a66f6ae318c1ddec0cb7f53@AI:AI;),AND(OR(SLICE(c77d1a7b0a66f6ae318c1ddec0cb7f53@B:B;)=$hospital,\"_all_\"=$hospital),DATEVALUE(SLICE(c77d1a7b0a66f6ae318c1ddec0cb7f53@H:H;),\"MMM yyyy\")=FIRST(LAST(&'7b17cc59-97',4))))),SUM(SELECT(SLICE(c77d1a7b0a66f6ae318c1ddec0cb7f53@AH:AH;),AND(OR(SLICE(c77d1a7b0a66f6ae318c1ddec0cb7f53@B:B;)=$hospital,\"_all_\"=$hospital),DATEVALUE(SLICE(c77d1a7b0a66f6ae318c1ddec0cb7f53@H:H;),\"MMM yyyy\")=FIRST(LAST(&'7b17cc59-97',4))))),SUM(SELECT(SLICE(c77d1a7b0a66f6ae318c1ddec0cb7f53@AG:AG;),AND(OR(SLICE(c77d1a7b0a66f6ae318c1ddec0cb7f53@B:B;)=$hospital,\"_all_\"=$hospital),DATEVALUE(SLICE(c77d1a7b0a66f6ae318c1ddec0cb7f53@H:H;),\"MMM yyyy\")=FIRST(LAST(&'7b17cc59-97',4))))),SUM(SELECT(SLICE(c77d1a7b0a66f6ae318c1ddec0cb7f53@AE:AE;),AND(OR(SLICE(c77d1a7b0a66f6ae318c1ddec0cb7f53@B:B;)=$hospital,\"_all_\"=$hospital),DATEVALUE(SLICE(c77d1a7b0a66f6ae318c1ddec0cb7f53@H:H;),\"MMM yyyy\")=FIRST(LAST(&'7b17cc59-97',4))))),SUM(SELECT(SLICE(c77d1a7b0a66f6ae318c1ddec0cb7f53@AJ:AJ;),AND(OR(SLICE(c77d1a7b0a66f6ae318c1ddec0cb7f53@B:B;)=$hospital,\"_all_\"=$hospital),DATEVALUE(SLICE(c77d1a7b0a66f6ae318c1ddec0cb7f53@H:H;),\"MMM yyyy\")=FIRST(LAST(&'7b17cc59-97',4))))))",
+                           "ver": 2
+                        }
+                     ],
+                     "data": [
+                        [
+                           0,
+                           0,
+                           0,
+                           0,
+                           0,
+                           0
+                        ]
+                     ],
+                     "autoFmt": true,
+                     "name": "New Column",
+                     "index": 4,
+                     "customHeader": true,
+                     "align": "c"
+                  },
+                  {
+                     "type": "table_col",
+                     "role": "tcol",
+                     "id": "6b81aae0",
+                     "displayName": "3rd Month",
+                     "renamed": true,
+                     "size": "xx-small",
+                     "fmt": "num",
+                     "fmtArgs": {
+                        "resultMetadata": {
+                           "ignoreDateFormat": false,
+                           "isAggregated": false,
+                           "formulaIsDataPointer": false,
+                           "suggestedName": "Unnamed 1",
+                           "resultCount": 1
+                        },
+                        "autoFmt": {
+                           "fmtArgs": {
+                              "precision": "0"
+                           },
+                           "defaultAggregate": "SUM",
+                           "fmt": "num"
+                        }
+                     },
+                     "components": [
+                        {
+                           "type": "table_headers",
+                           "role": "customHeader",
+                           "id": "2e9aa82e",
+                           "displayName": "3rd Month",
+                           "size": "xx-small",
+                           "fmt": "txt",
+                           "fmtArgs": {
+                              "resultMetadata": {
+                                 "ignoreDateFormat": false,
+                                 "isAggregated": false,
+                                 "formulaIsDataPointer": false,
+                                 "suggestedName": "Unnamed 1",
+                                 "resultCount": 1
+                              }
+                           },
+                           "dstContext": {
+                              "id": "dst2e9aa82e",
+                              "kid": "ba7733c8bb9e0f797d13a8a1b9f51fc5"
+                           },
+                           "conditions": [
+                              {
+                                 "predicates": [
+                                    {
+                                       "left": {
+                                          "self": 1
+                                       },
+                                       "type": "ne",
+                                       "right": {
+                                          "raw": "0"
+                                       }
+                                    }
+                                 ],
+                                 "reactions": [
+                                    {
+                                       "type": "background-color",
+                                       "value": "cx-bgcolor_fff",
+                                       "isScalar": true
+                                    }
+                                 ]
+                              }
+                           ],
+                           "formulas": [
+                              {
+                                 "txt": "FIRST(LAST(&'7b17cc59-97',3))",
+                                 "ver": 2
+                              }
+                           ],
+                           "data": [
+                              [
+                                 "Feb 2019"
+                              ]
+                           ],
+                           "mixin": "label",
+                           "align": "c",
+                           "font_colour": "cx-color_000",
+                           "font_style": "bold"
+                        }
+                     ],
+                     "formulas": [
+                        {
+                           "txt": "ARRAY(SUM(SELECT(SLICE(c77d1a7b0a66f6ae318c1ddec0cb7f53@AF:AF;),AND(OR(SLICE(c77d1a7b0a66f6ae318c1ddec0cb7f53@B:B;)=$hospital,\"_all_\"=$hospital),DATEVALUE(SLICE(c77d1a7b0a66f6ae318c1ddec0cb7f53@H:H;),\"MMM yyyy\")=FIRST(LAST(&'7b17cc59-97',3))))),SUM(SELECT(SLICE(c77d1a7b0a66f6ae318c1ddec0cb7f53@AI:AI;),AND(OR(SLICE(c77d1a7b0a66f6ae318c1ddec0cb7f53@B:B;)=$hospital,\"_all_\"=$hospital),DATEVALUE(SLICE(c77d1a7b0a66f6ae318c1ddec0cb7f53@H:H;),\"MMM yyyy\")=FIRST(LAST(&'7b17cc59-97',3))))),SUM(SELECT(SLICE(c77d1a7b0a66f6ae318c1ddec0cb7f53@AH:AH;),AND(OR(SLICE(c77d1a7b0a66f6ae318c1ddec0cb7f53@B:B;)=$hospital,\"_all_\"=$hospital),DATEVALUE(SLICE(c77d1a7b0a66f6ae318c1ddec0cb7f53@H:H;),\"MMM yyyy\")=FIRST(LAST(&'7b17cc59-97',3))))),SUM(SELECT(SLICE(c77d1a7b0a66f6ae318c1ddec0cb7f53@AG:AG;),AND(OR(SLICE(c77d1a7b0a66f6ae318c1ddec0cb7f53@B:B;)=$hospital,\"_all_\"=$hospital),DATEVALUE(SLICE(c77d1a7b0a66f6ae318c1ddec0cb7f53@H:H;),\"MMM yyyy\")=FIRST(LAST(&'7b17cc59-97',3))))),SUM(SELECT(SLICE(c77d1a7b0a66f6ae318c1ddec0cb7f53@AE:AE;),AND(OR(SLICE(c77d1a7b0a66f6ae318c1ddec0cb7f53@B:B;)=$hospital,\"_all_\"=$hospital),DATEVALUE(SLICE(c77d1a7b0a66f6ae318c1ddec0cb7f53@H:H;),\"MMM yyyy\")=FIRST(LAST(&'7b17cc59-97',3))))),SUM(SELECT(SLICE(c77d1a7b0a66f6ae318c1ddec0cb7f53@AJ:AJ;),AND(OR(SLICE(c77d1a7b0a66f6ae318c1ddec0cb7f53@B:B;)=$hospital,\"_all_\"=$hospital),DATEVALUE(SLICE(c77d1a7b0a66f6ae318c1ddec0cb7f53@H:H;),\"MMM yyyy\")=FIRST(LAST(&'7b17cc59-97',3))))))",
+                           "ver": 2
+                        }
+                     ],
+                     "data": [
+                        [
+                           0,
+                           0,
+                           0,
+                           0,
+                           0,
+                           0
+                        ]
+                     ],
+                     "autoFmt": true,
+                     "name": "New Column",
+                     "index": 5,
+                     "customHeader": true,
+                     "align": "c"
+                  },
+                  {
+                     "type": "table_col",
+                     "role": "tcol",
+                     "id": "ba80193d",
+                     "displayName": "2nd Month",
+                     "renamed": true,
+                     "size": "xx-small",
+                     "fmt": "num",
+                     "fmtArgs": {
+                        "resultMetadata": {
+                           "ignoreDateFormat": false,
+                           "isAggregated": false,
+                           "formulaIsDataPointer": false,
+                           "suggestedName": "Unnamed 1",
+                           "resultCount": 1
+                        },
+                        "autoFmt": {
+                           "fmtArgs": {
+                              "precision": "0"
+                           },
+                           "defaultAggregate": "SUM",
+                           "fmt": "num"
+                        }
+                     },
+                     "components": [
+                        {
+                           "type": "table_headers",
+                           "role": "customHeader",
+                           "id": "b5c47be1",
+                           "displayName": "2nd Month",
+                           "size": "xx-small",
+                           "fmt": "txt",
+                           "fmtArgs": {
+                              "resultMetadata": {
+                                 "ignoreDateFormat": false,
+                                 "isAggregated": false,
+                                 "formulaIsDataPointer": false,
+                                 "suggestedName": "Unnamed 1",
+                                 "resultCount": 1
+                              }
+                           },
+                           "dstContext": {
+                              "id": "dstb5c47be1",
+                              "kid": "ba7733c8bb9e0f797d13a8a1b9f51fc5"
+                           },
+                           "conditions": [
+                              {
+                                 "predicates": [
+                                    {
+                                       "left": {
+                                          "self": 1
+                                       },
+                                       "type": "ne",
+                                       "right": {
+                                          "raw": "0"
+                                       }
+                                    }
+                                 ],
+                                 "reactions": [
+                                    {
+                                       "type": "background-color",
+                                       "value": "cx-bgcolor_fff",
+                                       "isScalar": true
+                                    }
+                                 ]
+                              }
+                           ],
+                           "formulas": [
+                              {
+                                 "txt": "FIRST(LAST(&'7b17cc59-97',2))",
+                                 "ver": 2
+                              }
+                           ],
+                           "data": [
+                              [
+                                 "Mar 2019"
+                              ]
+                           ],
+                           "mixin": "label",
+                           "align": "c",
+                           "font_colour": "cx-color_000",
+                           "font_style": "bold"
+                        }
+                     ],
+                     "formulas": [
+                        {
+                           "txt": "ARRAY(SUM(SELECT(SLICE(c77d1a7b0a66f6ae318c1ddec0cb7f53@AF:AF;),AND(OR(SLICE(c77d1a7b0a66f6ae318c1ddec0cb7f53@B:B;)=$hospital,\"_all_\"=$hospital),DATEVALUE(SLICE(c77d1a7b0a66f6ae318c1ddec0cb7f53@H:H;),\"MMM yyyy\")=FIRST(LAST(&'7b17cc59-97',2))))),SUM(SELECT(SLICE(c77d1a7b0a66f6ae318c1ddec0cb7f53@AI:AI;),AND(OR(SLICE(c77d1a7b0a66f6ae318c1ddec0cb7f53@B:B;)=$hospital,\"_all_\"=$hospital),DATEVALUE(SLICE(c77d1a7b0a66f6ae318c1ddec0cb7f53@H:H;),\"MMM yyyy\")=FIRST(LAST(&'7b17cc59-97',2))))),SUM(SELECT(SLICE(c77d1a7b0a66f6ae318c1ddec0cb7f53@AH:AH;),AND(OR(SLICE(c77d1a7b0a66f6ae318c1ddec0cb7f53@B:B;)=$hospital,\"_all_\"=$hospital),DATEVALUE(SLICE(c77d1a7b0a66f6ae318c1ddec0cb7f53@H:H;),\"MMM yyyy\")=FIRST(LAST(&'7b17cc59-97',2))))),SUM(SELECT(SLICE(c77d1a7b0a66f6ae318c1ddec0cb7f53@AG:AG;),AND(OR(SLICE(c77d1a7b0a66f6ae318c1ddec0cb7f53@B:B;)=$hospital,\"_all_\"=$hospital),DATEVALUE(SLICE(c77d1a7b0a66f6ae318c1ddec0cb7f53@H:H;),\"MMM yyyy\")=FIRST(LAST(&'7b17cc59-97',2))))),SUM(SELECT(SLICE(c77d1a7b0a66f6ae318c1ddec0cb7f53@AE:AE;),AND(OR(SLICE(c77d1a7b0a66f6ae318c1ddec0cb7f53@B:B;)=$hospital,\"_all_\"=$hospital),DATEVALUE(SLICE(c77d1a7b0a66f6ae318c1ddec0cb7f53@H:H;),\"MMM yyyy\")=FIRST(LAST(&'7b17cc59-97',2))))),SUM(SELECT(SLICE(c77d1a7b0a66f6ae318c1ddec0cb7f53@AJ:AJ;),AND(OR(SLICE(c77d1a7b0a66f6ae318c1ddec0cb7f53@B:B;)=$hospital,\"_all_\"=$hospital),DATEVALUE(SLICE(c77d1a7b0a66f6ae318c1ddec0cb7f53@H:H;),\"MMM yyyy\")=FIRST(LAST(&'7b17cc59-97',2))))))",
+                           "ver": 2
+                        }
+                     ],
+                     "data": [
+                        [
+                           0,
+                           0,
+                           0,
+                           0,
+                           0,
+                           0
+                        ]
+                     ],
+                     "autoFmt": true,
+                     "name": "New Column",
+                     "index": 6,
+                     "customHeader": true,
+                     "align": "c"
+                  },
+                  {
+                     "type": "table_col",
+                     "role": "tcol",
+                     "id": "67288e36",
+                     "displayName": "1st Month",
+                     "renamed": true,
+                     "size": "xx-small",
+                     "fmt": "num",
+                     "fmtArgs": {
+                        "resultMetadata": {
+                           "ignoreDateFormat": false,
+                           "isAggregated": false,
+                           "formulaIsDataPointer": false,
+                           "suggestedName": "Unnamed 1",
+                           "resultCount": 1
+                        },
+                        "autoFmt": {
+                           "fmtArgs": {
+                              "precision": "0"
+                           },
+                           "defaultAggregate": "SUM",
+                           "fmt": "num"
+                        }
+                     },
+                     "components": [
+                        {
+                           "type": "table_headers",
+                           "role": "customHeader",
+                           "id": "5d8e2ea8",
+                           "displayName": "1st Month",
+                           "size": "xx-small",
+                           "fmt": "txt",
+                           "fmtArgs": {
+                              "resultMetadata": {
+                                 "ignoreDateFormat": false,
+                                 "isAggregated": false,
+                                 "formulaIsDataPointer": false,
+                                 "suggestedName": "Unnamed 1",
+                                 "resultCount": 1
+                              }
+                           },
+                           "dstContext": {
+                              "id": "dst5d8e2ea8",
+                              "kid": "ba7733c8bb9e0f797d13a8a1b9f51fc5"
+                           },
+                           "conditions": [
+                              {
+                                 "predicates": [
+                                    {
+                                       "left": {
+                                          "self": 1
+                                       },
+                                       "type": "ne",
+                                       "right": {
+                                          "raw": "0"
+                                       }
+                                    }
+                                 ],
+                                 "reactions": [
+                                    {
+                                       "type": "background-color",
+                                       "value": "cx-bgcolor_fff",
+                                       "isScalar": true
+                                    }
+                                 ]
+                              }
+                           ],
+                           "formulas": [
+                              {
+                                 "txt": "LAST(&'7b17cc59-97')",
+                                 "ver": 2
+                              }
+                           ],
+                           "data": [
+                              [
+                                 "Apr 2019"
+                              ]
+                           ],
+                           "mixin": "label",
+                           "align": "c",
+                           "font_colour": "cx-color_000",
+                           "font_style": "bold"
+                        }
+                     ],
+                     "formulas": [
+                        {
+                           "txt": "ARRAY(SUM(SELECT(SLICE(c77d1a7b0a66f6ae318c1ddec0cb7f53@AF:AF;),AND(OR(SLICE(c77d1a7b0a66f6ae318c1ddec0cb7f53@B:B;)=$hospital,\"_all_\"=$hospital),DATEVALUE(SLICE(c77d1a7b0a66f6ae318c1ddec0cb7f53@H:H;),\"MMM yyyy\")=LAST(&'7b17cc59-97')))),SUM(SELECT(SLICE(c77d1a7b0a66f6ae318c1ddec0cb7f53@AI:AI;),AND(OR(SLICE(c77d1a7b0a66f6ae318c1ddec0cb7f53@B:B;)=$hospital,\"_all_\"=$hospital),DATEVALUE(SLICE(c77d1a7b0a66f6ae318c1ddec0cb7f53@H:H;),\"MMM yyyy\")=LAST(&'7b17cc59-97')))),SUM(SELECT(SLICE(c77d1a7b0a66f6ae318c1ddec0cb7f53@AH:AH;),AND(OR(SLICE(c77d1a7b0a66f6ae318c1ddec0cb7f53@B:B;)=$hospital,\"_all_\"=$hospital),DATEVALUE(SLICE(c77d1a7b0a66f6ae318c1ddec0cb7f53@H:H;),\"MMM yyyy\")=LAST(&'7b17cc59-97')))),SUM(SELECT(SLICE(c77d1a7b0a66f6ae318c1ddec0cb7f53@AG:AG;),AND(OR(SLICE(c77d1a7b0a66f6ae318c1ddec0cb7f53@B:B;)=$hospital,\"_all_\"=$hospital),DATEVALUE(SLICE(c77d1a7b0a66f6ae318c1ddec0cb7f53@H:H;),\"MMM yyyy\")=LAST(&'7b17cc59-97')))),SUM(SELECT(SLICE(c77d1a7b0a66f6ae318c1ddec0cb7f53@AE:AE;),AND(OR(SLICE(c77d1a7b0a66f6ae318c1ddec0cb7f53@B:B;)=$hospital,\"_all_\"=$hospital),DATEVALUE(SLICE(c77d1a7b0a66f6ae318c1ddec0cb7f53@H:H;),\"MMM yyyy\")=LAST(&'7b17cc59-97')))),SUM(SELECT(SLICE(c77d1a7b0a66f6ae318c1ddec0cb7f53@AJ:AJ;),AND(OR(SLICE(c77d1a7b0a66f6ae318c1ddec0cb7f53@B:B;)=$hospital,\"_all_\"=$hospital),DATEVALUE(SLICE(c77d1a7b0a66f6ae318c1ddec0cb7f53@H:H;),\"MMM yyyy\")=LAST(&'7b17cc59-97')))))",
+                           "ver": 2
+                        }
+                     ],
+                     "data": [
+                        [
+                           0,
+                           0,
+                           0,
+                           2,
+                           2,
+                           0
+                        ]
+                     ],
+                     "autoFmt": true,
+                     "name": "New Column",
+                     "index": 7,
+                     "customHeader": true,
+                     "align": "c"
+                  }
+               ]
+            }
+         ],
+         "rows": 2,
+         "cols": 3,
+         "widths": [
+            {
+               "x": 1,
+               "w": 300
+            }
+         ],
+         "cellData": [
+            {
+               "x": 1,
+               "y": 0,
+               "alignment": 1
+            },
+            {
+               "x": 1,
+               "y": 1
+            },
+            {
+               "x": 0,
+               "y": 1,
+               "w": 3
+            }
+         ]
+      }
+   ]
+}
