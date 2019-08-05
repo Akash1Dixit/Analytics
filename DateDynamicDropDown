@@ -1,0 +1,243 @@
+{
+   "title": "Dates",
+   "id": "7eef867af36246282c16b1fa32411429",
+   "workspace": {
+      "dimensions": {
+         "w": 550
+      },
+      "datasources": []
+   },
+   "showToolbar": false,
+   "appliedMigrations": {
+      "post_dst": true,
+      "separate_root_dsts": true,
+      "result_rows2": true
+   },
+   "components": [
+      {
+         "type": "panel_grid",
+         "id": "d7c0ec95-1",
+         "displayName": "Layout Grid",
+         "components": [
+            {
+               "type": "input",
+               "id": "36cc6cf7-2",
+               "displayName": "User Input Control",
+               "layoutConfig": {
+                  "x": 0,
+                  "y": 0
+               },
+               "dstContext": {
+                  "id": "dst36cc6cf72",
+                  "kid": "7eef867af36246282c16b1fa32411429"
+               },
+               "components": [
+                  {
+                     "type": "proxy",
+                     "role": "values",
+                     "id": "39d0623d-3",
+                     "displayName": "Values",
+                     "fmtArgs": {
+                        "resultMetadata": {
+                           "ignoreDateFormat": false,
+                           "isAggregated": false,
+                           "expiryScheme": [
+                              {
+                                 "expiryType": "EOD",
+                                 "expiryTimezoneId": null
+                              }
+                           ],
+                           "formulaIsDataPointer": false,
+                           "suggestedName": "Unnamed 1",
+                           "resultCount": 1
+                        }
+                     },
+                     "formulas": [
+                        {
+                           "txt": "DATEVALUE(DATE_ADD(DATE_STARTOF(TODAY(),\"3\"),\"3\",$date),\"MM/dd/yyyy\")",
+                           "ver": 2
+                        }
+                     ],
+                     "data": [
+                        [
+                           "06/01/2019"
+                        ]
+                     ],
+                     "autoFmt": false
+                  },
+                  {
+                     "type": "proxy",
+                     "role": "labels",
+                     "id": "65c58db5-4",
+                     "displayName": "Labels",
+                     "formulas": [],
+                     "data": [],
+                     "autoFmt": false
+                  }
+               ],
+               "scope": 2,
+               "propName": "date_start",
+               "inputType": 1
+            },
+            {
+               "type": "input",
+               "id": "971411bb-5",
+               "displayName": "User Input Control 2",
+               "layoutConfig": {
+                  "x": 1,
+                  "y": 0
+               },
+               "dstContext": {
+                  "id": "dst971411bb5",
+                  "kid": "7eef867af36246282c16b1fa32411429"
+               },
+               "components": [
+                  {
+                     "type": "proxy",
+                     "role": "values",
+                     "id": "5380e7d3-6",
+                     "displayName": "Values",
+                     "fmtArgs": {
+                        "resultMetadata": {
+                           "ignoreDateFormat": true,
+                           "isAggregated": false,
+                           "expiryScheme": [
+                              {
+                                 "expiryType": "EOD",
+                                 "expiryTimezoneId": null
+                              }
+                           ],
+                           "formulaIsDataPointer": false,
+                           "suggestedName": "Unnamed 1",
+                           "resultCount": 1
+                        }
+                     },
+                     "formulas": [
+                        {
+                           "txt": "ARRAY(0,CUMULATIVE(REPEAT(-1,COUNT(GROUP(DATEVALUE(DATERANGE(DATE_STARTOF(TODAY(),\"1\"),TODAY()),\"yyMM\")))-1)))",
+                           "ver": 2
+                        }
+                     ],
+                     "data": [
+                        [
+                           "0",
+                           "-1",
+                           "-2",
+                           "-3",
+                           "-4",
+                           "-5",
+                           "-6"
+                        ]
+                     ],
+                     "autoFmt": false
+                  },
+                  {
+                     "type": "proxy",
+                     "role": "labels",
+                     "id": "271f34d3-7",
+                     "displayName": "Labels",
+                     "fmtArgs": {
+                        "resultMetadata": {
+                           "ignoreDateFormat": true,
+                           "isAggregated": false,
+                           "expiryScheme": [
+                              {
+                                 "expiryType": "EOD",
+                                 "expiryTimezoneId": null
+                              }
+                           ],
+                           "formulaIsDataPointer": false,
+                           "suggestedName": "Unnamed 1",
+                           "resultCount": 1
+                        }
+                     },
+                     "formulas": [
+                        {
+                           "txt": "MAPFLAT(ARRAY(0,CUMULATIVE(REPEAT(-1,COUNT(GROUP(DATEVALUE(DATERANGE(DATE_STARTOF(TODAY(),\"1\"),TODAY()),\"yyMM\")))-1))),\"date\",DATEVALUE(DATE_ADD(TODAY(),\"3\",$date),\"MMMM\"))",
+                           "ver": 2
+                        }
+                     ],
+                     "data": [
+                        [
+                           "July",
+                           "June",
+                           "May",
+                           "April",
+                           "March",
+                           "February",
+                           "January"
+                        ]
+                     ],
+                     "autoFmt": false
+                  }
+               ],
+               "scope": 2,
+               "propName": "date",
+               "inputType": 1
+            },
+            {
+               "type": "input",
+               "id": "8227c69f-8",
+               "displayName": "User Input Control 3",
+               "layoutConfig": {
+                  "x": 2,
+                  "y": 0
+               },
+               "dstContext": {
+                  "id": "dst8227c69f8",
+                  "kid": "7eef867af36246282c16b1fa32411429"
+               },
+               "components": [
+                  {
+                     "type": "proxy",
+                     "role": "values",
+                     "id": "6b806519-9",
+                     "displayName": "Values",
+                     "fmtArgs": {
+                        "resultMetadata": {
+                           "ignoreDateFormat": false,
+                           "isAggregated": false,
+                           "expiryScheme": [
+                              {
+                                 "expiryType": "EOD",
+                                 "expiryTimezoneId": null
+                              }
+                           ],
+                           "formulaIsDataPointer": false,
+                           "suggestedName": "Unnamed 1",
+                           "resultCount": 1
+                        }
+                     },
+                     "formulas": [
+                        {
+                           "txt": "DATEVALUE(DATE_ADD(DATE_ENDOF(TODAY(),\"3\"),\"3\",$date),\"MM/dd/yyyy\")",
+                           "ver": 2
+                        }
+                     ],
+                     "data": [
+                        [
+                           "06/30/2019"
+                        ]
+                     ],
+                     "autoFmt": false
+                  },
+                  {
+                     "type": "proxy",
+                     "role": "labels",
+                     "id": "a119af85-10",
+                     "displayName": "Labels",
+                     "formulas": [],
+                     "data": [],
+                     "autoFmt": false
+                  }
+               ],
+               "scope": 2,
+               "propName": "end_Date",
+               "inputType": 1
+            }
+         ],
+         "rows": 1,
+         "cols": 3
+      }
+   ]
+}

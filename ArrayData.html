@@ -1,0 +1,504 @@
+{
+   "title": "ArrayData",
+   "id": "578a3cfa0c05c7d365ce2458520064ba",
+   "workspace": {
+      "dimensions": {
+         "w": 550
+      },
+      "datasources": [],
+      "dataSets": [
+         {
+            "id": "7771b101b6a0d99438121ef1fa45357e"
+         }
+      ]
+   },
+   "appliedMigrations": {
+      "post_dst": true,
+      "separate_root_dsts": true,
+      "result_rows2": true
+   },
+   "components": [
+      {
+         "type": "html_tpl2",
+         "id": "450ee61c-1",
+         "displayName": "HTML Template",
+         "dstContext": {
+            "id": "dst450ee61c1"
+         },
+         "components": [
+            {
+               "type": "html_data",
+               "role": "data",
+               "id": "d864a415-2",
+               "displayName": "Series1",
+               "fmt": "num",
+               "fmtArgs": {
+                  "resultMetadata": {
+                     "ignoreDateFormat": false,
+                     "isAggregated": false,
+                     "formulaIsDataPointer": false,
+                     "suggestedName": "Unnamed 1",
+                     "resultCount": 1
+                  },
+                  "autoFmt": {
+                     "fmtArgs": {
+                        "precision": "0"
+                     },
+                     "defaultAggregate": "SUM",
+                     "fmt": "num"
+                  }
+               },
+               "dstContext": {
+                  "id": "dstd864a4152",
+                  "kid": "578a3cfa0c05c7d365ce2458520064ba"
+               },
+               "isDstRoot": true,
+               "formulas": [
+                  {
+                     "txt": "ARRAY(123, 456, 789)",
+                     "ver": 2
+                  }
+               ],
+               "data": [
+                  [
+                     123,
+                     456,
+                     789
+                  ]
+               ],
+               "autoFmt": true,
+               "mixin": "label",
+               "dataId": "Series1"
+            },
+            {
+               "type": "html_data",
+               "role": "data",
+               "id": "91866a3a-3",
+               "displayName": "Series2",
+               "fmt": "txt",
+               "fmtArgs": {
+                  "resultMetadata": {
+                     "ignoreDateFormat": false,
+                     "isAggregated": false,
+                     "formulaIsDataPointer": false,
+                     "suggestedName": "Unnamed 1",
+                     "resultCount": 1
+                  },
+                  "autoFmt": {
+                     "fmtArgs": {},
+                     "defaultAggregate": "COUNT",
+                     "fmt": "txt"
+                  }
+               },
+               "dstContext": {
+                  "id": "dst91866a3a3",
+                  "kid": "578a3cfa0c05c7d365ce2458520064ba"
+               },
+               "isDstRoot": true,
+               "formulas": [
+                  {
+                     "txt": "ARRAY(\"a\",\"m\",\"d\")",
+                     "ver": 2
+                  }
+               ],
+               "data": [
+                  [
+                     "a",
+                     "m",
+                     "d"
+                  ]
+               ],
+               "autoFmt": true,
+               "mixin": "label",
+               "dataId": "Series2"
+            }
+         ],
+         "tpl": "<table>\n<tr><th>Data</th>\n<td>&nbsp;&nbsp;</td>\n<th>Array</th>\n</tr>\n\n{{each Series1}}\n<tr>\n<td>${$value}</td>\n<td>&nbsp;&nbsp;</td>\n<center><td>${Series2[$index]}</td></center>\n</tr>\n{{/each}}\n\n\n\n\n\n\n\n\n",
+         "dataModelType": "arr"
+      },
+      {
+         "type": "html_tpl2",
+         "id": "1401d162-4",
+         "displayName": "HTML Template 2",
+         "dstContext": {
+            "id": "dst1401d1624"
+         },
+         "components": [
+            {
+               "type": "html_data",
+               "role": "data",
+               "id": "6113a526-5",
+               "displayName": "Series1",
+               "fmt": "txt",
+               "fmtArgs": {
+                  "resultMetadata": {
+                     "ignoreDateFormat": false,
+                     "isAggregated": false,
+                     "formulaIsDataPointer": false,
+                     "suggestedName": "Unnamed 1",
+                     "resultCount": 1
+                  },
+                  "autoFmt": {
+                     "fmtArgs": {},
+                     "defaultAggregate": "COUNT",
+                     "fmt": "txt"
+                  }
+               },
+               "dstContext": {
+                  "id": "dst6113a5265",
+                  "kid": "578a3cfa0c05c7d365ce2458520064ba"
+               },
+               "isDstRoot": true,
+               "formulas": [
+                  {
+                     "txt": "GROUP(SELECT(7771b101b6a0d99438121ef1fa45357e#072a500382d98522e94487bd1cc50f7c;,7771b101b6a0d99438121ef1fa45357e#68d63e132f6f3357ee696deb433e835b;=\"Reseller\"))",
+                     "ver": 2
+                  }
+               ],
+               "data": [
+                  [
+                     "Bread",
+                     "Butter",
+                     "Eggs",
+                     "Milk"
+                  ]
+               ],
+               "autoFmt": true,
+               "mixin": "label",
+               "dataId": "Series1"
+            },
+            {
+               "type": "html_data",
+               "role": "data",
+               "id": "89a3633f-6",
+               "displayName": "Series2",
+               "fmt": "txt",
+               "fmtArgs": {
+                  "resultMetadata": {
+                     "ignoreDateFormat": false,
+                     "isAggregated": false,
+                     "formulaIsDataPointer": false,
+                     "suggestedName": "Unnamed 1",
+                     "resultCount": 1
+                  },
+                  "autoFmt": {
+                     "fmtArgs": {},
+                     "defaultAggregate": "COUNT",
+                     "fmt": "txt"
+                  }
+               },
+               "dstContext": {
+                  "id": "dst89a3633f6",
+                  "kid": "578a3cfa0c05c7d365ce2458520064ba"
+               },
+               "isDstRoot": true,
+               "formulas": [
+                  {
+                     "txt": "GROUP(SELECT(7771b101b6a0d99438121ef1fa45357e#5cb329b9672f0c2e64c879bc3f12979f;,7771b101b6a0d99438121ef1fa45357e#68d63e132f6f3357ee696deb433e835b;=\"Reseller\"))",
+                     "ver": 2
+                  }
+               ],
+               "data": [
+                  [
+                     "Ahmed Arthurs",
+                     "Carmine Carman",
+                     "Dalton Dray",
+                     "Jeffry Jarrett",
+                     "Kelvin Kash",
+                     "Phil Phung",
+                     "Renaldo Recore",
+                     "Tyrell Turek",
+                     "Virgil Valenti",
+                     "Wendell Wark"
+                  ]
+               ],
+               "autoFmt": true,
+               "mixin": "label",
+               "dataId": "Series2"
+            },
+            {
+               "type": "html_data",
+               "role": "data",
+               "id": "bb98d8e9-26",
+               "displayName": "Series3",
+               "fmt": "num",
+               "fmtArgs": {
+                  "resultMetadata": {
+                     "ignoreDateFormat": false,
+                     "isAggregated": false,
+                     "formulaIsDataPointer": false,
+                     "suggestedName": "Unnamed 1",
+                     "resultCount": 1
+                  },
+                  "autoFmt": {
+                     "fmtArgs": {
+                        "precision": "2"
+                     },
+                     "defaultAggregate": "SUM",
+                     "fmt": "num"
+                  }
+               },
+               "dstContext": {
+                  "id": "dstbb98d8e926",
+                  "kid": "578a3cfa0c05c7d365ce2458520064ba"
+               },
+               "isDstRoot": true,
+               "formulas": [
+                  {
+                     "txt": "SELECT(7771b101b6a0d99438121ef1fa45357e#6112bb345b7ac0e6d910c58e8b0bf688;,7771b101b6a0d99438121ef1fa45357e#68d63e132f6f3357ee696deb433e835b;=\"Reseller\")",
+                     "ver": 2
+                  }
+               ],
+               "data": [
+                  [
+                     46.08,
+                     46.08,
+                     14.52,
+                     61.35,
+                     30.38,
+                     15.16,
+                     29.61,
+                     30.38,
+                     2.92,
+                     53.13,
+                     15.03,
+                     52.69,
+                     44.38,
+                     47.9,
+                     12.87,
+                     32.32,
+                     34.11,
+                     46.54,
+                     20.44,
+                     24.24,
+                     55.88,
+                     57.26,
+                     21.71,
+                     47.63,
+                     28.49,
+                     48.96,
+                     39.38,
+                     57.48,
+                     31.08,
+                     14.2,
+                     17.36,
+                     37.9,
+                     30.38,
+                     28.63,
+                     30.06,
+                     39.48,
+                     40.9,
+                     10.68,
+                     35.56,
+                     10.77,
+                     22.19,
+                     14.32,
+                     17.52,
+                     57.6,
+                     15.85,
+                     17.32,
+                     3.29,
+                     15.36,
+                     44.46,
+                     1.67,
+                     25.06,
+                     3.17,
+                     66.04,
+                     12.68,
+                     25.36,
+                     33.99,
+                     46.08,
+                     30.64,
+                     50.1,
+                     59.54,
+                     14.52,
+                     38.64,
+                     32.55,
+                     16.32,
+                     28.32,
+                     15.99,
+                     40.9,
+                     11.37,
+                     28.74,
+                     16.94,
+                     8.01,
+                     43.4,
+                     5.34,
+                     45.72,
+                     15.19,
+                     17.9,
+                     24.15,
+                     6.68,
+                     33.81,
+                     25.06,
+                     20.2,
+                     67.06,
+                     25.56,
+                     26.04,
+                     11.49,
+                     23.04,
+                     33.67,
+                     31.78,
+                     49.94,
+                     28.64,
+                     25.4,
+                     23.38,
+                     28.8,
+                     15.45,
+                     50.12,
+                     28.53,
+                     12.68,
+                     26.04,
+                     36.81,
+                     21.24
+                  ]
+               ],
+               "autoFmt": true,
+               "mixin": "label",
+               "dataId": "Series3"
+            },
+            {
+               "type": "html_data",
+               "role": "data",
+               "id": "d597b4d9-19",
+               "displayName": "Series4",
+               "fmt": "txt",
+               "fmtArgs": {
+                  "resultMetadata": {
+                     "ignoreDateFormat": false,
+                     "isAggregated": false,
+                     "formulaIsDataPointer": false,
+                     "suggestedName": "Unnamed 1",
+                     "resultCount": 1
+                  },
+                  "autoFmt": {
+                     "fmtArgs": {},
+                     "defaultAggregate": "COUNT",
+                     "fmt": "txt"
+                  }
+               },
+               "dstContext": {
+                  "id": "dstd597b4d919",
+                  "kid": "578a3cfa0c05c7d365ce2458520064ba"
+               },
+               "isDstRoot": true,
+               "formulas": [
+                  {
+                     "txt": "SELECT(7771b101b6a0d99438121ef1fa45357e#b5092a9ca001733430acfb811d20a74a;,7771b101b6a0d99438121ef1fa45357e#68d63e132f6f3357ee696deb433e835b;=\"Reseller\")",
+                     "ver": 2
+                  }
+               ],
+               "data": [
+                  [
+                     "Janus, Ltd.",
+                     "Janus, Ltd.",
+                     "Universal Kilns",
+                     "C-Systems",
+                     "Wash and Brush Up Company",
+                     "Gaia, Inc.",
+                     "Maersk Intersolar",
+                     "R. Holden & Sons",
+                     "Hahne-Kedar",
+                     "Bamberly Trust Coporation",
+                     "Taggert Transcontinental",
+                     "Lady Luck, Incorporated",
+                     "Yoyodyne",
+                     "C-Systems",
+                     "R. Holden & Sons",
+                     "Fairing Spacelines",
+                     "Baria Frontiers",
+                     "Lady Luck, Incorporated",
+                     "Salamander Syndicate",
+                     "ADVANCE Communications",
+                     "Baria Frontiers",
+                     "ADVANCE Communications",
+                     "Accelerant Investments",
+                     "Gaia, Inc.",
+                     "R. Holden & Sons",
+                     "Universal Kilns",
+                     "Icarus Lines, Inc.",
+                     "Gaia, Inc.",
+                     "Pacific Export Company",
+                     "da Costa Associates",
+                     "Kamida Imports",
+                     "Universal Kilns",
+                     "Salamander Syndicate",
+                     "Pacific Export Company",
+                     "Gaia, Inc.",
+                     "Kamida Imports",
+                     "Wash and Brush Up Company",
+                     "Nakamesh Import Consortium",
+                     "V. Howell Industries",
+                     "da Costa Associates",
+                     "Pacific Export Company",
+                     "V. Howell Industries",
+                     "Eclipse",
+                     "Eclipse",
+                     "Universal Kilns",
+                     "Baria Frontiers",
+                     "Gaia, Inc.",
+                     "Eclipse",
+                     "R. Holden & Sons",
+                     "ADVANCE Communications",
+                     "Icarus Lines, Inc.",
+                     "Taggert Transcontinental",
+                     "Lady Luck, Incorporated",
+                     "Baria Frontiers",
+                     "Gaia, Inc.",
+                     "Hahne-Kedar",
+                     "Olive Almeiro Agency",
+                     "Janus, Ltd.",
+                     "Wash and Brush Up Company",
+                     "Pacific Export Company",
+                     "ADVANCE Communications",
+                     "Hahne-Kedar",
+                     "Kamida Imports",
+                     "Kamida Imports",
+                     "Hahne-Kedar",
+                     "R. Holden & Sons",
+                     "Maersk Intersolar",
+                     "Hahne-Kedar",
+                     "Wash and Brush Up Company",
+                     "Lady Luck, Incorporated",
+                     "Janus, Ltd.",
+                     "Nakamesh Import Consortium",
+                     "Maersk Intersolar",
+                     "Maersk Intersolar",
+                     "Janus, Ltd.",
+                     "R. Holden & Sons",
+                     "V. Howell Industries",
+                     "Salamander Syndicate",
+                     "Wash and Brush Up Company",
+                     "Taggert Transcontinental",
+                     "da Costa Associates",
+                     "Kamida Imports",
+                     "Nakamesh Import Consortium",
+                     "Gaia, Inc.",
+                     "Hahne-Kedar",
+                     "ADVANCE Communications",
+                     "R. Holden & Sons",
+                     "V. Howell Industries",
+                     "R. Holden & Sons",
+                     "Taggert Transcontinental",
+                     "Yoyodyne",
+                     "Eclipse",
+                     "Fairing Spacelines",
+                     "Maersk Intersolar",
+                     "Gaia, Inc.",
+                     "Hahne-Kedar",
+                     "Wash and Brush Up Company",
+                     "Taggert Transcontinental",
+                     "Icarus Lines, Inc.",
+                     "Baria Frontiers"
+                  ]
+               ],
+               "autoFmt": true,
+               "mixin": "label",
+               "dataId": "Series4"
+            }
+         ],
+         "tpl": "<style>.table {width:100px;\n  color: black;\n  padding: 12px 16px;\n  text-decoration: none;  \n  height: 300px; \n  margin-top: 10px;\n  }</style>\n<div>\n<table class=\"table\">\n<tr><th>Product</th>\n<td>&nbsp;&nbsp;</td>\n<td>&nbsp;&nbsp;</td>\n<td>&nbsp;&nbsp;</td>\n<th>Sales Rep.</th>\n<td>&nbsp;&nbsp;</td>\n<td>&nbsp;&nbsp;</td>\n<td>&nbsp;&nbsp;</td>\n<th>Revenue</th>\n<td>&nbsp;&nbsp;</td>\n<td>&nbsp;&nbsp;</td>\n<td>&nbsp;&nbsp;</td>\n<th>Country Name</th>\n</tr>\n{{each Series1}}\n<tr>\n<td>${$value}</td>\n<td>&nbsp;&nbsp;</td>\n<td>&nbsp;&nbsp;</td>\n<td>&nbsp;&nbsp;</td>\n<td>${Series2[$index]}</td>\n<td>&nbsp;&nbsp;</td>\n<td>&nbsp;&nbsp;</td>\n<td>&nbsp;&nbsp;</td>\n<td>${Series3[$index]}</td>\n<td>&nbsp;&nbsp;</td>\n<td>&nbsp;&nbsp;</td>\n<td>&nbsp;&nbsp;</td>\n<td>${Series4[$index]}</td>\n</tr>\n{{/each}}\n</div>\n\n\n\n\n\n\n\n\n\n\n",
+         "dataModelType": "arr"
+      }
+   ]
+}

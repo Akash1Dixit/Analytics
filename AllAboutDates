@@ -1,0 +1,24 @@
+ Start Date //    if((count(4bc69bf3230265649bd0b197b7cfe4d4@/id;)>="0"),datevalue(switch($fbAdsDatePreset,"today",today(),"yesterday",yesterday(),"this_week_sun_today",date_startof(today(),"4"),"last_week_sun_sat",date_startof(today(),"4","-1"),"last_7d",date_add(today(),"5","-6"),"this_month",date_startof(today(),"3"),"last_month",date_startof(today(),"3","-1"),"last_30d",date_add(today(),"5","-29")),"yyyy-MM-dd"),blank())
+
+
+ Start date previous// if((count(4bc69bf3230265649bd0b197b7cfe4d4@/id;)>="0"),datevalue(switch($fbAdsDatePreset,"today",yesterday(),"yesterday",date_add(yesterday(),"5","-1"),"this_week_sun_today",date_startof(today(),"4","-1"),"last_week_sun_sat",date_startof(today(),"4","-2"),"last_7d",date_add(today(),"5","-13"),"this_month",date_startof(today(),"3","-1"),"last_month",date_startof(today(),"3","-2"),"last_30d",date_add(today(),"5","-59")),"yyyy-MM-dd"),blank())
+
+
+ End date // if((count(4bc69bf3230265649bd0b197b7cfe4d4@/id;)>="0"),datevalue(switch($fbAdsDatePreset,"yesterday",yesterday(),"last_week_sun_sat",date_endof(today(),"4","-1"),"last_month",date_endof(today(),"3","-1"),"_default_",today()),"yyyy-MM-dd"),blank())
+
+
+ End date Pre // if((count(4bc69bf3230265649bd0b197b7cfe4d4@/id;)>="0"),datevalue(switch($fbAdsDatePreset,"today",yesterday(),"yesterday",date_add(yesterday(),"5","-1"),"this_week_sun_today",date_add(today(),"4","-1"),"last_week_sun_sat",date_endof(today(),"4","-2"),"last_7d",date_add(today(),"5","-7"),"this_month",date_add(today(),"3","-1"),"last_month",date_endof(today(),"3","-2"),"last_30d",date_add(today(),"5","-30")),"yyyy-MM-dd"),blank())
+
+
+ count Days Period // count_days(date(&'af0c9a7c',"yyyy-MM-dd"),date(&'5e74e4e3',"yyyy-MM-dd"))
+
+ Count Days Full week // count_days(date_startof(today(),"4"),date_endof(today(),"4"))
+
+ Count days full month// count_days(date_startof(today(),"3"),date_endof(today(),"3"))
+
+ count days week to date // count_days(date_startof(today(),"4"),today())
+
+ count daYS MONTH to week // count_days(date_startof(today(),"4"),today())
+
+
+ if((count(43a632e940b521905abe2ba0d408e487@/id;)>="0"),datevalue(switch($fbAdsDatePreset,"today",today(),"yesterday",yesterday(),"this_week_sun_today",date_startof(today(),"4"),"last_week_sun_sat",date_startof(today(),"4","-1"),"last_7d",date_add(today(),"5","-6"),"this_month",date_startof(today(),"3"),"last_month",date_startof(today(),"3","-1"),"last_30d",date_add(today(),"5","-29")),"yyyy-MM-dd"),blank())
