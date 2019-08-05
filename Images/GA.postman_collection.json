@@ -1,0 +1,273 @@
+{
+	"info": {
+		"_postman_id": "2597ae17-c85b-41a2-b86f-5068c359ea08",
+		"name": "GA",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "https://accounts.google.com/o/oauth2/token?access_token=oauth2-token&alt=json&Client ID=400676483000-umd2oajfti0vs2jlp2fmc7v2j77g7t3t.apps.googleusercontent.com&Client Secret=vyp3T7PpBp7-Z7rYYKkzCzhz",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://accounts.google.com/o/oauth2/token?access_token=oauth2-token&alt=json&Client ID=400676483000-umd2oajfti0vs2jlp2fmc7v2j77g7t3t.apps.googleusercontent.com&Client Secret=vyp3T7PpBp7-Z7rYYKkzCzhz",
+					"protocol": "https",
+					"host": [
+						"accounts",
+						"google",
+						"com"
+					],
+					"path": [
+						"o",
+						"oauth2",
+						"token"
+					],
+					"query": [
+						{
+							"key": "access_token",
+							"value": "oauth2-token"
+						},
+						{
+							"key": "alt",
+							"value": "json"
+						},
+						{
+							"key": "Client ID",
+							"value": "400676483000-umd2oajfti0vs2jlp2fmc7v2j77g7t3t.apps.googleusercontent.com"
+						},
+						{
+							"key": "Client Secret",
+							"value": "vyp3T7PpBp7-Z7rYYKkzCzhz"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://www.googleapis.com/analytics/v3/data/ga?ids=ga:193804563&start-date=7daysAgo&end-date=today&metrics=ga:users&dimensions=ga:date",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						},
+						{
+							"key": "accessToken",
+							"value": "ya29.GlvzBsRWdCl9AdzxWk8qCUIzq6b5eKjZsG-2Ss-RQe6rFlcqC6e0m88_lEVEGLXwCnvsEKkmVS8ZYU_WYs8h_QXIVnveP-Q3ahOS7wNJeOGyo1NhsKIF61YROz7f",
+							"type": "string"
+						},
+						{
+							"key": "tokenType",
+							"value": "Bearer",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://www.googleapis.com/analytics/v3/data/ga?ids=ga:193804563&start-date=7daysAgo&end-date=today&metrics=ga:users&dimensions=ga:date",
+					"protocol": "https",
+					"host": [
+						"www",
+						"googleapis",
+						"com"
+					],
+					"path": [
+						"analytics",
+						"v3",
+						"data",
+						"ga"
+					],
+					"query": [
+						{
+							"key": "ids",
+							"value": "ga:193804563"
+						},
+						{
+							"key": "start-date",
+							"value": "7daysAgo"
+						},
+						{
+							"key": "end-date",
+							"value": "today"
+						},
+						{
+							"key": "metrics",
+							"value": "ga:users"
+						},
+						{
+							"key": "dimensions",
+							"value": "ga:date"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://www.googleapis.com/oauth2/v4/token?code=4/NQEwH86JHEfwaHfXD9xIcFXLTCHIYirjMbkPIsEYSLmGQSjwFmEHlgBnUM5tBPDkXpRwnAvRIawPjV2uPBu3BQE&client_id=400676483000-umd2oajfti0vs2jlp2fmc7v2j77g7t3t.apps.googleusercontent.com&client_secret=vyp3T7PpBp7-Z7rYYKkzCzhz&redirect_uri=https://www.htmltemplateandjs.blogspot.com/oauth2/callback&grant_type=authorization_code",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://www.googleapis.com/oauth2/v4/token?code=4/NQG6UNT1STnLjvtvyS1Du6dWCSwvSySz0iR3R4EVbA3vV6zn3KY_T9DSa-bqONvU6jWUJiRLGkcG0bDTVaqBBb8&client_id=400676483000-umd2oajfti0vs2jlp2fmc7v2j77g7t3t.apps.googleusercontent.com&client_secret=vyp3T7PpBp7-Z7rYYKkzCzhz&redirect_uri=https://www.htmltemplateandjs.blogspot.com/oauth2/callback&grant_type=authorization_code",
+					"protocol": "https",
+					"host": [
+						"www",
+						"googleapis",
+						"com"
+					],
+					"path": [
+						"oauth2",
+						"v4",
+						"token"
+					],
+					"query": [
+						{
+							"key": "code",
+							"value": "4/NQG6UNT1STnLjvtvyS1Du6dWCSwvSySz0iR3R4EVbA3vV6zn3KY_T9DSa-bqONvU6jWUJiRLGkcG0bDTVaqBBb8"
+						},
+						{
+							"key": "client_id",
+							"value": "400676483000-umd2oajfti0vs2jlp2fmc7v2j77g7t3t.apps.googleusercontent.com"
+						},
+						{
+							"key": "client_secret",
+							"value": "vyp3T7PpBp7-Z7rYYKkzCzhz"
+						},
+						{
+							"key": "redirect_uri",
+							"value": "https://www.htmltemplateandjs.blogspot.com/oauth2/callback"
+						},
+						{
+							"key": "grant_type",
+							"value": "authorization_code"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://accounts.google.com/o/oauth2/v2/auth?scope=https://www.googleapis.com/auth/analytics.readonly&access_type=offline&include_granted_scopes=true&redirect_uri=https://www.htmltemplateandjs.blogspot.com/oauth2/callback&client_id=400676483000-umd2oajfti0vs2jlp2fmc7v2j77g7t3t.apps.googleusercontent.com& response_type=code",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://accounts.google.com/o/oauth2/v2/auth?scope=https://www.googleapis.com/auth/analytics.readonly&access_type=offline&include_granted_scopes=true&redirect_uri=https://www.htmltemplateandjs.blogspot.com/oauth2/callback&client_id=400676483000-umd2oajfti0vs2jlp2fmc7v2j77g7t3t.apps.googleusercontent.com& response_type=code",
+					"protocol": "https",
+					"host": [
+						"accounts",
+						"google",
+						"com"
+					],
+					"path": [
+						"o",
+						"oauth2",
+						"v2",
+						"auth"
+					],
+					"query": [
+						{
+							"key": "scope",
+							"value": "https://www.googleapis.com/auth/analytics.readonly"
+						},
+						{
+							"key": "access_type",
+							"value": "offline"
+						},
+						{
+							"key": "include_granted_scopes",
+							"value": "true"
+						},
+						{
+							"key": "redirect_uri",
+							"value": "https://www.htmltemplateandjs.blogspot.com/oauth2/callback"
+						},
+						{
+							"key": "client_id",
+							"value": "400676483000-umd2oajfti0vs2jlp2fmc7v2j77g7t3t.apps.googleusercontent.com"
+						},
+						{
+							"key": " response_type",
+							"value": "code"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://www.googleapis.com/oauth2/v4/token?refresh_token=ya29.Glz0BlCYOCe7jaI9RHDKXirMeDy9jr8DDFIT_zXm6ulQCmh2C-OUCvBcYv0-Vty9NUyV7ZvxCGCSI8odggSsKsWRwoKTjax9pFl-Jzh_no055xBV1aiAOctn0tGmPA&client_id=400676483000-umd2oajfti0vs2jlp2fmc7v2j77g7t3t.apps.googleusercontent.com&client_secret=vyp3T7PpBp7-Z7rYYKkzCzhz&grant_type=refresh_token",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://www.googleapis.com/oauth2/v4/token?refresh_token=ya29.Glz0BlCYOCe7jaI9RHDKXirMeDy9jr8DDFIT_zXm6ulQCmh2C-OUCvBcYv0-Vty9NUyV7ZvxCGCSI8odggSsKsWRwoKTjax9pFl-Jzh_no055xBV1aiAOctn0tGmPA&client_id=400676483000-umd2oajfti0vs2jlp2fmc7v2j77g7t3t.apps.googleusercontent.com&client_secret=vyp3T7PpBp7-Z7rYYKkzCzhz&grant_type=refresh_token",
+					"protocol": "https",
+					"host": [
+						"www",
+						"googleapis",
+						"com"
+					],
+					"path": [
+						"oauth2",
+						"v4",
+						"token"
+					],
+					"query": [
+						{
+							"key": "refresh_token",
+							"value": "ya29.Glz0BlCYOCe7jaI9RHDKXirMeDy9jr8DDFIT_zXm6ulQCmh2C-OUCvBcYv0-Vty9NUyV7ZvxCGCSI8odggSsKsWRwoKTjax9pFl-Jzh_no055xBV1aiAOctn0tGmPA"
+						},
+						{
+							"key": "client_id",
+							"value": "400676483000-umd2oajfti0vs2jlp2fmc7v2j77g7t3t.apps.googleusercontent.com"
+						},
+						{
+							"key": "client_secret",
+							"value": "vyp3T7PpBp7-Z7rYYKkzCzhz"
+						},
+						{
+							"key": "grant_type",
+							"value": "refresh_token"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

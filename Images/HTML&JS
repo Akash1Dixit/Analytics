@@ -1,0 +1,128 @@
+<html>
+<head>
+<style>
+.table {width:1100px;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;  
+  height: 250px; 
+  margin-top: 50px;
+  }
+.dropbtn {
+  background-color: #000080;
+  border: none;
+  color: white;
+  padding: 0px 42px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 12px;
+  margin-right:16px;
+ 
+}
+
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #3e8e41;
+}
+
+.dropdown {
+  position: relative;
+  display: absolute;
+ 
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  text-align: center;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.show {display:block;}
+</style>
+</head>
+<body>
+<center>
+<div class="dropdown">
+  <button id="myBtn" style="margin:5px;" class="dropbtn">Review</button>
+
+ <div id="myDropdown" class="dropdown-content"> 
+
+ 
+ <div>
+<table class="table">
+<tr><th>Product</th>
+<td>&nbsp;&nbsp;</td>
+<td>&nbsp;&nbsp;</td>
+<td>&nbsp;&nbsp;</td>
+<th>Sales Rep.</th>
+<td>&nbsp;&nbsp;</td>
+<td>&nbsp;&nbsp;</td>
+<td>&nbsp;&nbsp;</td>
+<th>Revenue</th>
+<td>&nbsp;&nbsp;</td>
+<td>&nbsp;&nbsp;</td>
+<td>&nbsp;&nbsp;</td>
+<th>Country Name</th>
+</tr>
+{{each Series1}}
+<tr>
+<td>${$value}</td>
+<td>&nbsp;&nbsp;</td>
+<td>&nbsp;&nbsp;</td>
+<td>&nbsp;&nbsp;</td>
+<td>${Series2[$index]}</td>
+<td>&nbsp;&nbsp;</td>
+<td>&nbsp;&nbsp;</td>
+<td>&nbsp;&nbsp;</td>
+<td>${Series3[$index]}</td>
+<td>&nbsp;&nbsp;</td>
+<td>&nbsp;&nbsp;</td>
+<td>&nbsp;&nbsp;</td>
+<td>${Series4[$index]}</td>
+</tr>
+{{/each}}
+</div>
+
+  </div>
+</div>
+
+</center>
+</body>
+</html>
+
+
+<script>document.getElementById("myBtn").onclick = function() {myFunction()};
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+} </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
